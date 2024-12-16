@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Bhavin Sasapra </title>
+    <link rel="icon" type="image/x-icon" href="../imbhavin95.github.io/assets/images/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Mukta:300,400,500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/live-resume.css">
+</head>
+
+<body>
+    <header>
+        <button class="btn btn-white btn-share ml-auto mr-3 ml-md-0 mr-md-auto"><img src="assets/images/share.svg" alt="share" class="btn-img">
+            SHARE</button>
+        <nav class="collapsible-nav justify-content-end" id="collapsible-nav">
+            <a href="index.html" class="nav-link">HOME</a>
+            <a href="contact.html" class="nav-link active">CONTACT</a>
+        </nav>
+        <button class="btn btn-menu-toggle btn-white rounded-circle" data-toggle="collapsible-nav"
+            data-target="collapsible-nav"><img src="assets/images/hamburger.svg" alt="hamburger"></button>
+    </header>
+    <div class="content-wrapper">
+        <aside>
+            <div class="profile-img-wrapper">
+                <img src="assets/images/Profile.webp" alt="profile">
+            </div>
+            <h1 class="profile-name">Bhavin Sasapra</h1>
+            <div class="text-center">
+                <span class="badge badge-white badge-pill profile-designation">Software Engineer</span>
+            </div>
+            <nav class="social-links">
+                <a target="_blank" href="https://www.linkedin.com/in/imbhavin95/" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a target="_blank" href="https://github.com/imbhavin95" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="skype:bhavin_sasapra?chat" class="social-link"><i class="fab fa-skype"></i></a>
+            </nav>
+            <div class="widget">
+                <h5 class="widget-title">personal information</h5>
+                <div class="widget-content">
+                    <p>BIRTHDAY : 1<sup>st</sup> October 1995</p>
+                    <p>PHONE : +91 834 777 8176</p>
+                    <p>EMAIL : imbhavin95@gmail.com</p>
+                    <p>Location : Gujarat, India</p>
+                    <button class="btn btn-download-cv btn-primary rounded-pill" id="CvButton"> <img src="assets/images/download.svg" alt="download"
+                        class="btn-img">DOWNLOAD CV </button>
+                </div>
+            </div>
+            <div class="widget card">
+                <div class="card-body">
+                    <div class="widget-content">
+                        <h5 class="widget-title card-title">LANGUAGES</h5>
+                        <p>English : Fluent</p>
+                        <p>Hindi : Fluent</p>
+                        <p>Gujarati : Native</p>
+                    </div>
+                </div>
+            </div>
+            <div class="widget card">
+                <div class="card-body">
+                    <div class="widget-content">
+                        <h5 class="widget-title card-title">INTERESTS</h5>
+                        <p>Cricket</p>
+                        <p>Movies</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <main>
+            <section class="contact-section">
+                <h2 class="section-title">GET IN TOUCH</h2>
+                <p class="mb-4">If you’d like to talk about a project, our work or anything else then get in touch.</p>
+                
+                <div class="contact-cards-wrapper">
+                    <div class="contact-card">
+                        <h6 class="contact-card-title">CALL US</h6>
+                        <a href="tel:+918347778176" class="contact-card-content">+91 834 777 8176</a>
+                    </div>
+                    <div class="contact-card">
+                        <h6 class="contact-card-title">Email Us</h6>
+                        <a href="mailto:imbhavin95@gmail.com" class="contact-card-content">imbhavin95@gmail.com</a>
+                    </div>
+                    <div class="contact-card">
+                        <h6 class="contact-card-title">Skype</h6>
+                        <a href="skype:bhavin_sasapra?chat" class="contact-card-content">bhavin_sasapra</a>
+                    </div>
+                </div>
+
+            </section>
+            <footer>© All Rights Reserved <span id="year"></span></footer>
+        </main>
+    </div>
+    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendors/@popperjs/core/dist/umd/popper-base.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/entry/jq.entry.min.js"></script>
+    <script src="assets/js/live-resume.js"></script>
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('year').textContent = currentYear;
+      </script>
+      <script>
+        document.getElementById('CvButton').addEventListener('click', function() {
+          const pdfUrl = 'assets/doc/Bhavin_Sasapra_CV.pdf'; // Change this to the actual path of your PDF
+          
+          // Create a temporary link element
+          window.open(pdfUrl, '_blank');
+          const link = document.createElement('a');
+          link.href = pdfUrl;
+          link.download = 'Bhavin_Sasapra_CV.pdf'; // Specify the filename for the downloaded file
+          
+          // Append the link to the document, trigger a click event, and remove the link
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        });
+      </script>
+</body>
+
+</html>
